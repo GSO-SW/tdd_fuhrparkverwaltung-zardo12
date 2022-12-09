@@ -22,7 +22,15 @@ namespace Fuhrparkverwaltung
 
         public void Fahren(int streckeInKilometern)
         {
-            kilometerstand += streckeInKilometern;
+            if(streckeInKilometern > 0)
+            {
+                kilometerstand += streckeInKilometern;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+           ;
         }
     }
 }
